@@ -1,0 +1,12 @@
+<%- include('partials/header.ejs', {user: user}) -%>
+    <h1>
+        Login Page
+    </h1>
+    <form id="login-form" method="POST" action="/user/login">
+        
+        </br></br>
+        Username: <input type="text" name="name"></br></br>
+        Password: <input type="password" name="password"/></br></br>
+        <button type="submit" name="Login">Login</button></br>
+    </form>
+<%- include('partials/footer.ejs') -%>

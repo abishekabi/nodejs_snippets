@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <title>
+            MeetUp App
+        </title>
+        <link rel="stylesheet" href="/assets/stylesheets/style.css">
+    </head>
+    
+    <body style="margin: 0;">
+        <nav class="site-header-nav">
+            <div class="logo">
+                <a href="/">
+                    <img src="/assets/images/logo.png" alt="Logo">
+                </a>
+            </div>
+            
+            <%- include('navigation.ejs', {user: user}) -%>
+
+        
+        
+        <div class="user-specific-nav">
+                <ul>
+                    <li>
+                        <a href="/"> 
+                            
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/connections"> 
+                            Connections
+                        </a>
+                    </li>
+                    <li style="float: right; margin: 15px;">
+                        Welcome <%= user %>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+        
+
+        

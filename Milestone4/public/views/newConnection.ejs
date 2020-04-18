@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs', {user: user}) -%>
+    <h1>
+        Create Connection
+
+    </h1>
+
+    <form id="new-connection-form" method="POST" action="/connections/new">
+        Topic: <input type="text" name="Topic"> 
+        </br></br>
+        Name: <input type="text" name="Name"></br></br>
+        Details: <input type="text" name="Details"/></br></br>
+        Where: <input type="text" name="Topic"></br></br>
+        When: <input type="date" name="when"></br></br></br>
+        <button type="submit" name="create-connection">create-connection</button></br>
+    </form>
+<%- include('partials/footer.ejs') -%>

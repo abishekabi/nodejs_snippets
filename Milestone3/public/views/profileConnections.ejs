@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs', {pageParams: pageParams, user: user}) -%>
+<section class="main-content">
+    <div>
+        <h2 class="my-connection-header">My connections</h2>
+    </div>
+    <div>
+        <% if (userConnections) { %>
+            <table class="my-connections-table">
+                <thead>
+                    <tr>
+                        <td>Connection</td>
+                        <td>Category</td>
+                        <td>Attending?</td>
+                        <td>Actions</td>
+                    </tr>
+                </thead>
+                <% userConnections.forEach(userConnection => { %>
+                    <tr>
+                        <td><%=userConnection.connection.connectionName%></td>
+                        <td><%=userConnection.connection.connectionCategory%></td>
+                        <td><%=userConnection.rsvp%></td>
+                        <td>
+                            <form action="/connection/<%=userConnection.connection.connectionId%>" method="GET">
+                                <button type="submit">Update</button>
+                            </form>
+                            <form action="/user/rsvp" method="POST">
+                                <input type="hidden" name="_method" value="delete" />
+                                <input type="hidden" name="connection-id" value="<%= userConnection.connection.connectionId %>" />
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% });%>
+            </table>
+        <% } else { %>
+            <h3>No saved connections.</h3>
+        <% } %>
+    </div>
+</section>
+<%- include('partials/footer.ejs') -%>

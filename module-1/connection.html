@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<bod/body lang="en-US">
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <title>
+            Module 1
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body style="margin: 0;">
+        <nav class="site-header-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="user-nav">
+                <ul>
+                    <li>
+                        <a class="active" href="#">
+                            Start a new connection
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Sign-Up
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="user-specific-nav">
+            <div>
+                <ul>
+                    <li>
+                        <a href="index.html"> 
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="connections.html"> 
+                            Connections
+                        </a>
+                    </li>
+                    <li>
+                        <a href="connection.html"> 
+                            Connection
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            About
+                        </a>
+                    </li>
+                    <li style="float: right; margin: 15px;">
+                        Welcome {{ User }}
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="main-area">
+            <h2>
+                Connection
+            </h2>
+            <table style="width: 60%;text-align: center;">
+                <tr>
+                    <th>
+                        <h2> Linux </h2>
+                    </th>
+                    <th>
+                        
+                    </th>
+                    <th>
+                        Are you going to Event ?
+                        <br/>
+                        <form action="savedConnections.html">
+                            <button style="background-color: green;color: white;"> Yes</button>
+                            <button style="background-color: red";color: white;> No</button>
+                            <button style="background-color: blue;color: white;"> Maybe</button>
+                        </form>
+                        
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="user.png" style="width: 100px;height: 100px;" alt="User image"> 
+                    </td>
+                    <td>
+                        Hosted by: {{ User }}<br/>
+                        {{ Date }}<br/>
+                        {{ Time }}<br/>
+                        {{ Location }}<br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4> Details: </h4>
+                    </td>
+                    <td>
+                        This is the new {{user}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                </tr>
+
+
+            </table>
+          
+        </div>
+    
+    <footer>
+        <div class="footer-cls">
+            <ul>
+                <li>
+                    @UNCC MeetUp
+                </li>
+                <li>
+                    <a href="#"> 
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#"> 
+                        Contact
+                    </a>
+                </li>                
+            </ul>
+        </div>
+    </footer>
+    </body>
+
+</html>

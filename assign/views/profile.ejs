@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Profile</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <%- include('nav') -%>
+    <h1>Profile Page</h1>
+
+    <form action="/profile" method="post">
+      Name:<input type="text" id="Name" name="Name"><br><br>
+      ID:<input type="text" id="ID" name="ID"><br><br>
+      Degree: <input type="text" id="Degree" name="Degree"><br><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+
+  </body>
+</html>

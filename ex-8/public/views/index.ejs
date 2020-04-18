@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home</title>
+    <link href="assets/stylesheets/style.css" rel="stylesheet" type="text/css" />
+  </head>
+    <body>
+
+      <table border="solid">
+        <% if (course) {%>
+          <tr>
+            <th>
+              CourseID
+            </th>
+            <th>
+              Title
+            </th>
+            <th>
+              Term
+            </th>
+            <th>
+              Instructor
+            </th>
+          </tr>
+          <% course.forEach(function(course) { %>
+            <tr>
+              <td> <%= course.CourseID %> </td>
+              <td> <%= course.Title %> </td>
+              <td> <%= course.Term %> </td>
+              <td> <%= course.Instructor %> </td>
+              
+            </tr>
+          <% }); %>
+            
+   
+        <% } else { %>
+          <td> No Course Details Available! </td>
+        <% } %> 
+    
+    
+        </td>
+      </table>
+
+      <h2> Search </h2>
+      
+      
+      <form id="course-search" method="POST" action="/courseSearch">
+        </br></br>
+        course ID: <input type="text" name="courseID"></br></br>
+        <button type="submit">Submit</button></br>
+
+
+      </form>
+
+
+   
+        <form id="course-form" method="POST" action="/courseUpdate">
+            </br></br>
+            course ID: <input type="text" name="courseID"></br></br>
+            title: <input type="text" name="title"/></br></br>
+            term: <input type="text" name="term"></br></br>
+            instructor: <input type="text" name="instructor"></br></br></br>
+
+            <button type="submit">Submit</button></br>
+        </form>
+    </body>
+</html>

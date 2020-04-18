@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Details</title>
+    <link href="assets/stylesheets/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+
+    <table border="solid">
+      <% if (course.CourseID) {%>
+        <tr>
+          <th>
+            CourseID
+          </th>
+          <th>
+            Title
+          </th>
+          <th>
+            Term
+          </th>
+          <th>
+            Instructor
+          </th>
+        </tr>
+        <tr>
+          <td> <%= course.CourseID %> </td>
+          <td> <%= course.Title %> </td>
+          <td> <%= course.Term %> </td>
+          <td> <%= course.Instructor %> </td>
+        </tr>
+        <tr>
+          <td><%- include('image') -%></td>
+          
+        </tr>
+      <% } else { %>
+        <td> No Course Details Available! </td>
+      <% } %> 
+  
+    
+
+      </td>
+    </table>
+
+  </body>
+</html>

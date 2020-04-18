@@ -1,0 +1,30 @@
+<%- include('partials/header.ejs', {user: user}) -%>
+<div id="main-area">
+
+    
+        <h2>
+            Connections
+        </h2>
+        <% connections.forEach(function(connection){ %>
+            <ul>
+                <li>
+                    <%= connection._id %>
+                </li>
+                <ul>
+                    <% connection['connectionName'].forEach(connectionName => { %>
+                        <li>
+                            <a href="/connections/<%= connectionName.connectionID %>">
+                                <%= connectionName.connectionName %>
+                            </a>
+                        </li>
+                    <% });%>
+                </ul>
+                
+            </ul>
+
+        <%});%>
+           
+
+</div>    
+
+<%- include('partials/footer.ejs') -%>

@@ -1,0 +1,55 @@
+
+
+[
+    {
+       "connectionID": 1,
+       "connectionName": "Linux",
+       "category": "Tech",
+       "details": "Linux meetup for Tech",
+       "location": "Austin",
+       "date": "Fri Feb 21 13:18:06 EST 2020"
+    },
+    {
+       "connectionID": 2,
+       "connectionName": "Football",
+       "category": "Sports",
+       "details": "This is Football meetup for Sports People",
+       "location": "Charlotte",
+       "date": "Fri Feb 25 13:18:06 EST 2020"
+    },
+    {
+       "connectionID": 3,
+       "connectionName": "Biking",
+       "category": "Sports",
+       "details": "This is Biking meetup, Sports Category",
+       "location": "CLT",
+       "date": "Fri Feb 22 13:18:06 EST 2020"
+    },
+    {
+        "connectionID": 4,
+        "connectionName": "Runing",
+        "category": "Sports",
+        "details": "Running meetup for Sports",
+        "location": "Dallas",
+        "date": "Fri Feb 26 13:18:06 EST 2020"
+     },
+     {
+        "connectionID": 5,
+        "connectionName": "Windows",
+        "category": "Tech",
+        "details": "Windows meetup for Tech",
+        "location": "Concord",
+        "date": "Fri Feb 25 13:18:06 EST 2020"
+     },
+     {
+        "connectionID": 6,
+        "connectionName": "Mac",
+        "category": "Tech",
+        "details": "Mac meetup for Tech",
+        "location": "San Jose",
+        "date": "Fri Feb 24 13:18:06 EST 2020"
+     }
+
+]
+ 
+ 

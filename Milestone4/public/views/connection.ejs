@@ -1,0 +1,60 @@
+<%- include('partials/header.ejs', {user: user}) -%>
+        
+<div id="main-area">
+        <h2>
+            Connection
+        </h2>
+        <table style="width: 60%;text-align: center;">
+            <tr>
+                <th>
+                    <h2> <%= connection.connectionName %> </h2>
+                </th>
+                <th>
+                    
+                </th>
+                <th>
+                    Are you going to Event ?
+                    <br/>
+                    <form id="rsvp" action="/user/rsvp/<%= connection.connectionID %>"  method="POST">
+                        <input type="submit" style="background-color: green;color: white;"
+                         value="Yes" name="rsvp">  </input>
+                         <input type="submit" style="background-color: red;color: white;"
+                         value="No" name="rsvp">  </input>
+                         <input type="submit" style="background-color: blue;color: white;"
+                         value="Maybe" name="rsvp">  </input>
+                    </form>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/assets/images/img.png" style="width: 100px;height: 100px;" alt="User image"> 
+                </td>
+                <td>
+                    Hosted by: <%= user %> <br/>
+                    <%= connection.date %><br/>
+                    <%= connection.location %><br/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4> Details: </h4>
+                </td>
+                <td>
+                        <%= connection.details %>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+            </tr>
+
+
+        </table>
+      
+    </div>
+
+
+
+
+<%- include('partials/footer.ejs') -%>

@@ -1,0 +1,43 @@
+<%- include('partials/header.ejs', {user: user}) -%>
+<div id="main-area">
+    <h2>
+        User: <%= user %> Connections
+    </h2>
+    <table border="1" style="width: 60%;text-align: center;">
+        <tr>
+            <th>
+                Connection
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                Going? 
+            </th>
+
+        </tr>
+        <tr>
+            <td>
+                Linux
+            </td>
+            <td>
+                Tech
+            </td>
+            <td>
+                Yes
+            </td>
+            <td style="border-style: none;">
+                <form action="/connections/1">
+                    <button> Update </button>
+                </form>
+            </td>
+            <td style="border-style: none;">
+                <form action="/connections/1">
+                    <button> Delete </button>
+                </form>
+                
+            </td>                
+        </tr>
+    </table>
+</div>
+<%- include('partials/footer.ejs') -%>

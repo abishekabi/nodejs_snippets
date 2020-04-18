@@ -1,0 +1,31 @@
+
+<div class="user-nav">
+    <ul>
+        <li>
+            <a class="active" href="/connections/new">
+                Start a new connection
+            </a>
+        </li>
+        <% if (user == null) { %>
+            <li>
+                <a href="/connections/savedConnections">
+                    Login
+                </a>
+            </li>
+            <li>
+                <a href="/connections/savedConnections">
+                    Sign-Up
+                </a>
+            </li>
+        <%} else { %>
+            <li>
+                <a href="/">
+                    Logout
+                </a>
+            </li>
+        <% } %>
+    </ul>
+    
+</div>
+        
+        
