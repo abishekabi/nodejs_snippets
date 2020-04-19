@@ -15,8 +15,17 @@ router.get('/', (req, res) => {
         
         //req.session.userProfile['FirstName'] = null
     }
+    try{
+        var usr = req.session.userProfile[0].firstName;
+
+    }
+    catch(err) {
+        var usr= null;
+    }
+    finally{
+        res.render('index.ejs', {user:  usr});
+    }
     
-    res.render('index.ejs', {user: req.session.userProfile['firstName']});
 });
 
 module.exports = router;

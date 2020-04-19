@@ -5,7 +5,7 @@
     </div>
     <div>
         <% if (userConnections) { %>
-            <table class="my-connections-table">
+            <table class="my-connections-table" border="1">
                 <thead>
                     <tr>
                         <td>Connection</td>
@@ -16,16 +16,23 @@
                 </thead>
                 <% userConnections.forEach(userConnection => { %>
                     <tr>
-                        <td><%=userConnection.connection.connectionName%></td>
-                        <td><%=userConnection.connection.connectionCategory%></td>
-                        <td><%=userConnection.rsvp%></td>
+                        <td><%=userConnection.data.connectionName%></td>
+                        <td><%= userConnection.data.category %></td>
+                            <% if (userConnection.rsvp == 0 ){ %>
+                                <td>No</td>
+                            <%}%>
+                            <% if (userConnection.rsvp == 1 ){ %>
+                                <td>Yes</td>
+                            <%}%>
+                            <% if (userConnection.rsvp == 2 ){ %>
+                                <td>Maybe</td>
+                            <%}%>  
                         <td>
-                            <form action="/connection/<%=userConnection.connection.connectionId%>" method="GET">
+                            <form action="/connections/<%=userConnection.data.connectionID%>" method="GET">
                                 <button type="submit">Update</button>
                             </form>
-                            <form action="/user/rsvp" method="POST">
-                                <input type="hidden" name="_method" value="delete" />
-                                <input type="hidden" name="connection-id" value="<%= userConnection.connection.connectionId %>" />
+                            <br/>
+                            <form action="/user/rsvp/delete/<%=userConnection.data.connectionID%>" method="POST">
                                 <button type="submit">Delete</button>
                             </form>
                         </td>

@@ -12,7 +12,7 @@ var connectionSchema = new model.mongoose.Schema({
             value: null,
             required: true
         },
-        connectionCategory : {
+        category : {
             type: String,
             value: null,
             //required: true

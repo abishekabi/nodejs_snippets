@@ -33,9 +33,28 @@ router.get('/new', (req, res) => {
     res.render('newConnection.ejs', {user: req.session.userProfile['firstName']});
 });
 
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+  }
+
+
+
 router.post('/new', (req, res) => {
+    model.Connection.create({ 
+        "category": req.body["Topic"], 
+        "connectionName": req.body["Name"],
+        "details": req.body["Details"],
+        "connectionID": getRandomInt(10, 100),
+        "date": req.body["When"]
+    }, function(data){
+        console.log(data)
+        res.redirect('/connections');
+    });
+
     
-    res.redirect('/connections');
 });
 
 

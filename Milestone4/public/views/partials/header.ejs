@@ -30,12 +30,20 @@
                     
                     <li>
                         <a href="/connections"> 
-                            Connections
+                            All Connections
                         </a>
                     </li>
+                    <% if (user) { %>
+                    <li>
+                        <a href="/user/connections"> 
+                            User Connections
+                        </a>
+                    </li>
+                    
                     <li style="float: right; margin: 15px;">
                         Welcome <%= user %>
                     </li>
+                    <%}%>
                 </ul>
             </div>
     </nav>
